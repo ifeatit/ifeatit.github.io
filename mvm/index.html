@@ -36,10 +36,10 @@
         <div class="container-fluid">
           <ul class="nav navbar-upper user-block">
             <li>
-              <a class="sign-in" href="#">Авторизация</a>
+              <a class="sign-in" data-toggle="modal" href="#login-modal">Авторизация</a>
             </li>
             <li>
-              <a class="sign-up" href="#">Регистрация</a>
+              <a class="sign-up" data-toggle="modal" href="#myModal">Регистрация</a>
             </li>
             <li>
               <button class="btn btn-default">
@@ -66,19 +66,38 @@
           <div class="collapse navbar-collapse" id="navbar">
             <ul class="nav navbar-nav">
               <li class="active">
-                <a href="#">Главная <span class="sr-only">(current)</span></a>
+                <a class="menu-link--general" href="#">Главная <span class="sr-only">(current)</span></a>
               </li>
               <li>
-                <a href="#">Галерея работ</a>
+                <a class="menu-link--general" href="#">Галерея работ</a>
               </li>
               <li>
-                <a href="#">Новости</a>
+                <a class="menu-link--general" href="#">Новости</a>
               </li>
               <li>
-                <a href="#">Дилерам</a>
+                <a class=menu-link--general" href="#">Дилерам</a>
               </li>
-              <li>
-                <a href="#">Акции</a>
+              <li class="menu-item dropdown">
+                <a href="#" class="dropdown-toggle menu-link--general" data-toggle="dropdown">Акции<b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li class="menu-item">
+                    <a href="#">Все акции</a>
+                  </li>
+                  <li class="menu-item dropdown dropdown-submenu">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Категории</a>
+                    <ul class="dropdown-menu">
+                      <li class="menu-item"><a href="#">item</a></li>
+                      <li class="menu-item"><a href="#">item</a></li>
+                      <li class="menu-item"><a href="#">item</a></li>
+                      <li class="menu-item"><a href="#">item</a></li>
+                      <li class="menu-item"><a href="#">item</a></li>
+                      <li class="menu-item"><a href="#">item</a></li>
+                      <li class="menu-item"><a href="#">item</a></li>
+                      <li class="menu-item"><a href="#">item</a></li>
+                    </ul>
+                  </li>
+                  
+                </ul>
               </li>
               <li>
                 <a href="#">Статьи</a>
@@ -90,6 +109,42 @@
             <form class="navbar-form navbar-right">
               <div class="input-group">
                 <input type="text" class="form-control search-input" id="search-input" placeholder="Поиск по товарам">
+                <div class="search-hints">
+                  <div class="search-hints__wrapper">
+                    
+                    <ul class="dropdown-menu">
+                      
+                      <li class="menu-item dropdown dropdown-submenu">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Категория 1</a>
+                        <ul class="dropdown-menu dropdown-menu-search">
+                          <li class="menu-item"><a href="#">item</a></li>
+                          <li class="menu-item"><a href="#">item</a></li>
+                          <li class="menu-item"><a href="#">item</a></li>
+                          <li class="menu-item"><a href="#">item</a></li>
+                          <li class="menu-item"><a href="#">item</a></li>
+                          <li class="menu-item"><a href="#">item</a></li>
+                          <li class="menu-item"><a href="#">item</a></li>
+                          <li class="menu-item"><a href="#">item</a></li>
+                        </ul>
+                      </li>
+                      <li class="menu-item dropdown dropdown-submenu">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Категория 2</a>
+                        <ul class="dropdown-menu dropdown-menu-search">
+                          <li class="menu-item"><a href="#">item</a></li>
+                          <li class="menu-item"><a href="#">item</a></li>
+                          <li class="menu-item"><a href="#">item</a></li>
+                          <li class="menu-item"><a href="#">item</a></li>
+                          <li class="menu-item"><a href="#">item</a></li>
+                          <li class="menu-item"><a href="#">item</a></li>
+                          <li class="menu-item"><a href="#">item</a></li>
+                          <li class="menu-item"><a href="#">item</a></li>
+                        </ul>
+                      </li>
+                      
+                    </ul>
+                  </div>
+                  
+                </div>
                 <span class="input-group-btn">
                   <button class="btn btn-default" type="submit">
                     <i class="glyphicon glyphicon-search"></i>
@@ -573,6 +628,58 @@
         </div>
       </div>
     </footer>
+    <div class="modal fade login-modal" id="login-modal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <form role="form" action="http://mvm.webmake.pro/login" method="post" class="login-form" id="login-form">
+            <input name="_token" type="hidden" value="gGzNyzWVQglIy2qM2hksQpxk2xpB9HfEl6M2OxqC">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+              <h3 class="modal-title">Личный кабинет - Авторизация</h3>
+            </div>
+            <div class="modal-body">
+              <p class="login-modal__info-text">Введите логин и пароль для входа</p>
+              <div class="row">
+                <div class="col-sm-6">
+                  <div class="form-group label-floating is-empty">
+                      <label class="control-label" for="phone_field">Логин</label>
+                      <input class="form-control" id="phone_field" type="text" name="email">
+                  </div>
+                  <div class="form-group label-floating is-empty">
+                      <label class="control-label" for="phone_field">Пароль</label>
+                      <input class="form-control" id="phone_field" type="password" name="password">
+                  </div>
+                  <div class="checkbox">
+                    <label>
+                    <input name="remember" type="checkbox"><span class="checkbox-material"><span class=span></span>&nbsp;&nbsp;Запомнить в системе
+                    </label>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="login-modal__lock-img">
+                    <i class="fa fa-lock"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="submit" class="btn btn-raised btn-success withripple" style="margin: 0 1rem 1rem 0;">Отправить заявку</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div id="popup__toggle" data-toggle="modal" href="#callback-modal" style="width: 180px; height: 180px; cursor: pointer;">
+      <div class="circlephone" style="transform-origin: center;"></div>
+      <div class="circle-fill" style="transform-origin: center;"></div>
+      <div class="img-circle" style="transform-origin: center;">
+        <div class="img-circleblock" style="transform-origin: center;">
+          <div class="phone-icon">
+            <i class="glyphicon glyphicon-earphone"></i>
+          </div>
+        </div>
+      </div>
+    </div>
     <script src="js/main.js"></script>
   </body>
 </html>
