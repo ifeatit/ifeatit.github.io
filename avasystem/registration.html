@@ -1128,15 +1128,6 @@ input[type="range"] {
 body {
 	background-color: rgb(71, 121, 135);
 }
-.btn-reg {
-	font-size: 10px;
-	line-height: 10px;
-	padding: 5px;
-	margin: auto;
-	color: #ffffff;
-	width: 65px;
-}
-
 input,select {
     border: 1px solid rgba(99, 154, 169, 0.4);
     border-radius: 5px;
@@ -1154,12 +1145,18 @@ input,select {
 	<p>Ava
 	<span>an estimating system</span>
 	</p>
-	<form class="auth-form" action="0d2d568a3e7d4be9e3a90d2d56s0d2d5f68a3e7d4be9ed3a98a3ef7d4bed9e3a9.html">
-		<input type="text" required placeholder="user1" value="user1" readonly="">
-		<input type="password" required value="12345" readonly="">
-		<button class="btn-submit">Ввойти</button>
+	<form class="auth-form" action="registration.html">
+		<input type="text" required placeholder="логин">
+		<input type="password" required placeholder="пароль">
+    <select>
+      <option>Научный работник</option>
+      <option>IT специалист</option>
+      <option>Пользователь ПК</option>
+      <option>Студент</option>
+      <option>Школьник</option>
+    </select>
+		<button class="btn-submit">Зарегистрироваться</button>
 	</form>
-	<a href="registration.html" class="btn-submit btn-reg">Регистрация</a>
 	</div>
 </body>	
 </html>
